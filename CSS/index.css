@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+/*RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* img {
+    width: 100%
+} */
+
+ul,
+pl,
+li {
+    list-style: none;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*END OF RESET*/
+
+
+
+:root {
+
+    /*FONTS*/
+    --f-heading-xl: normal 3rem 'Amaranth', sans-serif, serif;
+    --f-heading-lg: normal 2.25rem 'Amaranth', sans-serif, serif;
+    --f-heading-md: normal 1.75rem 'Amaranth', sans-serif, serif;
+    --f-heading-sm: 500 1.125rem 'Amaranth', sans-serif, serif;
+    --f-body: normal .875rem 'Amaranth', sans-serif, serif;
+    --f-link: 500 1rem 'Amaranth', sans-serif, serif;
+    --f-link-xs: 500 .75rem 'Amaranth', sans-serif, serif;
+
+    /*COLORS*/
+
+    --c-text: #54565a;
+    --c-active: #FFE300;
+    --c-hover: #16043B;
+    --c-hover-light: #F6F3C2;
+    --c-title-btn: #AB0033;
+    --c-title: #23085A;
+
+
+    /*SPACING*/
+
+    --s-xl: 4rem;
+    --s-lg: 3rem;
+    --s-md: 2rem;
+    --s-mmd: 1.25rem;
+    --s-sm: 1rem;
+    --s-xs: .5625rem;
+    --s-xxs: .5rem;
+
+
+    /*sIZES*/
+    --mw-xl: 75rem;
+    --mw-lg: 60.625rem;
+
+    /*RADIUS*/
+
+    --r-xl: 6rem;
+    --r-sm: .3125rem;
+
+
+}
+
+/*------------------*/
+
+/*ElEMENTS*/
+
+.text--xl {
+    font: var(--f-heading-xl);
+}
+
+.text--lg {
+    font: var(--f-heading-lg);
+}
+
+.text--md {
+    font: var(--f-heading-md);
+}
+
+.text--sm {
+    font: var(--f-heading-sm);
+}
+
+.body,
+p {
+    font: var(--f-body);
+}
+
+.link {
+    font: var(--f-link);
+}
+
+.link-xs {
+    font: var(--f-link-xs);
+}
+
+.btn--squared {
+    font: var(--f-link);
+    background-color: var(--c-title-btn);
+    color: var(--c-active);
+    padding: var(--s-xs) var(--s-mmd);
+    display: inline-block;
+
+    &:hover {
+        background-color: var(--c-hover-light);
+        color: var(--c-hover);
+
+    }
+
+}
+
+.btn--light {
+    font: var(--f-link);
+    background-color: var(--c-hover-light);
+    color: var(--c-hover);
+    padding: var(--s-xs) var(--s-mmd);
+    display: inline-block;
+
+}
+
+
+.btn--dropdown {
+    font: var(--f-link);
+    background-color: transparent;
+    color: var(--c-hover);
+    padding: var(--s-xs) var(--s-mmd);
+    display: inline-block;
+
+    &:hover {
+        background-color: whitesmoke;
+
+
+    }
+
+}
+
+
+.btn--rounded {
+    font: var(--f-link);
+    background-color: var(--c-title-btn);
+    color: var(--c-active);
+    padding: var(--s-xs) var(--s-md);
+    border-radius: var(--r-xl);
+    display: inline-block;
+
+    &:hover {
+        background-color: var(--c-hover-light);
+        color: var(--c-hover);
+
+    }
+
+
+}
+
+
+
+/* SECTION ELEMENTS*/
+
+.section {
+    padding: var(--s-xl) var(--s-sm);
+
+}
+
+.container {
+    max-width: var(--mw-xl);
+    margin: 0 auto;
+}
+
+.bck-linear {
+    background: linear-gradient(180deg, #FF8200 28.93%, #FF4635 84.02% 84.02%);
+}
+
+
+
+/*------------------*/
+
+.text-block {
+
+    justify-content: center;
+    align-items: center;
+    gap: var(--s-lg);
+
+    & div {
+        flex: 1 0 0;
+    }
+
+    & img {
+        flex: 1 0 0;
+
+    }
+
+}
+
+/*--------------------------------------*/
+/*HEADER*/
+
+
+.header___nav {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    gap: 1.25rem;
+    background: linear-gradient(180deg, #FFE300 -29.43%, #FF8200 100%);
+    min-height: 10.5rem;
+
+    .header__nav__nav-register {
+        display: flex;
+        justify-content: flex-end;
+        gap: .1875rem;
+
+        .searchIcon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: white;
+            text-align: center;
+            padding-top: var(--s-xs);
+
+
+            .ri-search-line {
+                font-size: 1rem;
+                background-color: white;
+
+                padding: 0;
+            }
+        }
+
+
+    }
+
+
+
+    .header__nav__nav-logos {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+
+
+        .logoBC {
+            width: 7.5rem;
+            height: 2.125rem;
+        }
+
+
+
+        .logoTitle {
+
+            color: var(--c-title);
+            font-weight: bold;
+
+            &:hover {
+                color: var(--c-hover);
+            }
+
+            position: relative;
+            padding-left: 30px;
+
+
+        }
+
+        .logoTitle::before {
+            content: '';
+            width: 2px;
+            height: 38px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background-color: #23085A;
+        }
+
+    }
+
+    .header__nav__nav-default {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .1875rem;
+
+
+
+
+
+
+
+        li {
+
+
+            a {
+                display: inline-block;
+                white-space: nowrap;
+
+
+            }
+        }
+
+        /* DROPDOWN MENU*/
+        .btn-dropdown-main {
+            position: relative;
+
+
+
+
+            .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: var(--c-hover-light);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                display: grid;
+                grid-template-rows: 0fr;
+                z-index: 1000;
+                min-width: 100%;
+                width: max-content;
+
+                transition: grid-template-rows 0.4s ease-out;
+
+                .dropdown-links {
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+
+
+                }
+
+
+            }
+
+            &:hover .dropdown-menu {
+                grid-template-rows: 1fr;
+
+
+
+
+            }
+
+
+
+        }
+
+    }
+}
+
+/*END DROPDOWN MENU*/
+
+/*END OF HEADER*/
+
+/*BANNER-TOP*/
+
+.banner-top {
+    position: relative;
+    min-height: 25.8125rem;
+    overflow: hidden;
+
+
+    .banner-top-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .banner-top-content {
+
+
+        position: relative;
+
+        z-index: 2;
+        padding: 20px;
+    }
+
+}
