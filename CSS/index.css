@@ -34,6 +34,7 @@ a {
     --f-heading-lg: normal 2.25rem 'Amaranth', sans-serif, serif;
     --f-heading-md: normal 1.75rem 'Amaranth', sans-serif, serif;
     --f-heading-sm: 500 1.125rem 'Amaranth', sans-serif, serif;
+    --f-heading-xs: 500 1rem 'Amaranth', sans-serif, serif;
     --f-body: normal .875rem 'Amaranth', sans-serif, serif;
     --f-link: 500 1rem 'Amaranth', sans-serif, serif;
     --f-link-xs: 500 .75rem 'Amaranth', sans-serif, serif;
@@ -50,7 +51,7 @@ a {
 
 
     /*SPACING*/
-
+    --s-xxl: 8rem;
     --s-xl: 4rem;
     --s-lg: 3rem;
     --s-md: 2rem;
@@ -91,6 +92,10 @@ a {
 
 .text--sm {
     font: var(--f-heading-sm);
+}
+
+.text--xs {
+    font: var(--f-heading-xs);
 }
 
 .body,
@@ -624,8 +629,9 @@ header,
         grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
         grid-auto-rows: auto;
         gap: 6rem .625rem;
-        margin: var(--s-lg) auto;
-        padding: var(--s-xl) 0;
+        margin: var(--s-xl) auto;
+        padding: var(--s-lg) 0 0 0;
+
 
 
         .card {
@@ -722,25 +728,303 @@ header,
     position: relative;
     min-height: 18.75rem;
     overflow: hidden;
-    margin-top: var(--s-xl);
+    /* margin-top: var(--s-xl); */
+    background: linear-gradient(180deg, #ffe300 -20%, #ff651a 80%);
+    padding: var(--s-md) 0 0 0;
+
 
     .banner-middle-background {
         position: relative;
+        min-height: 31.25rem;
+        overflow: hidden;
 
         &::before {
             content: "";
-            background-image: url("/images/");
+            background-image: url("../images/banner-backgrd.png");
             background-repeat: no-repeat;
             background-position: 20% top;
             background-size: contain;
-            width: 452px;
-            height: 448px;
+            width: 28.25rem;
+            height: 28rem;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 58%;
+            left: 63%;
             display: block;
+
+        }
+
+        .banner-middle__block {
+
+            width: 100%;
+            max-width: 43.75rem;
+            min-height: 20.9375rem;
+            padding: 2.8125rem 2.5rem;
+            background-color: #FFE300;
+            border-top-right-radius: 3.125rem;
+            position: absolute;
+            left: 10%;
+            bottom: 7.8125rem;
+
+            &::before {
+                content: "";
+                width: 84px;
+                height: 100%;
+                background-color: #23085A;
+                transform: skew(0deg, -45deg);
+                position: absolute;
+                right: 100%;
+                top: 42px;
+                width: 134px;
+                top: 68px;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 80px;
+                background-color: #FF8200;
+                transform: skew(-45deg, 0deg);
+                position: absolute;
+                left: -40px;
+                top: 100%;
+                height: 127px;
+                left: -63px
+            }
+
+
+            p {
+
+                padding: var(--s-xs) var(--s-xxl) var(--s-mmd) 0;
+                color: var(--c-title-btn);
+            }
+
+            a {
+                align-self: center;
+                margin-top: auto;
+                width: 30%;
+                text-align: center;
+
+            }
+
         }
     }
 }
+
+/* END OF BANNER MIDDLE*/
+
+/*BLOG*/
+
+.blog {
+
+    background-color: var(--c-hover-light);
+    padding: var(--s-sm) var(--s-sm);
+
+    .blog__block {
+
+
+
+        .blog__cards-content {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: var(--s-md);
+            margin: var(--s-xl) auto;
+            padding: 0;
+
+
+            h2 {
+                color: var(--c-title);
+                padding: var(--s-sm) 0 var(--s-sm) 0;
+                width: 100%;
+                max-width: 65.5rem;
+                text-align: left;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 3.125rem;
+                    height: .25rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #23085A;
+                    border-radius: .3125rem;
+                }
+
+
+            }
+
+
+            .cards {
+                display: flex;
+                gap: var(--s-lg);
+
+                width: 100%;
+                max-width: 65.5rem;
+                justify-content: flex-start;
+
+
+
+                .blog__card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex: 1;
+                    max-width: 31.25rem;
+
+                    background-color: #e46161;
+                    border-radius: var(--r-md);
+                    overflow: hidden;
+
+
+                    img {
+                        border-radius: var(--r-sm);
+                        padding: var(--s-sm);
+                        width: 60%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+
+                }
+
+                .img-responsive {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    width: 100%;
+                }
+
+                .description {
+
+                    a {
+                        padding: var(--s-sm) var(--s-md);
+                        color: var(--c-title-btn);
+
+                        &:hover {
+                            text-decoration: underline;
+
+                        }
+
+                    }
+                }
+
+                p {
+                    text-align: left;
+                    line-height: 1.5rem;
+                    padding: var(--s-sm) var(--s-md);
+                }
+
+
+            }
+
+
+
+
+        }
+
+
+
+    }
+
+}
+
+
+
+/*END OF BLOG*/
+
+
+/*BANNER BOTTOM*/
+
+.banner-bottom {
+    position: relative;
+    min-height: 18.75rem;
+    overflow: hidden;
+    /* margin-top: var(--s-xl); */
+    background: linear-gradient(180deg, #ffe300 -20%, #ff651a 80%);
+    padding: var(--s-md) 0 0 0;
+
+
+    .banner-bottom-background {
+        position: relative;
+        min-height: 31.25rem;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            background-image: url("../images/teacher1.avif");
+            background-repeat: no-repeat;
+            background-position: 20% top;
+            background-size: contain;
+            width: 28.25rem;
+            height: 28rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 63%;
+            display: block;
+
+        }
+
+        .banner-bottom__block {
+
+            width: 100%;
+            max-width: 43.75rem;
+            min-height: 20.9375rem;
+            padding: 2.8125rem 2.5rem;
+            background-color: #FFE300;
+            border-top-right-radius: 3.125rem;
+            position: absolute;
+            left: 10%;
+            bottom: 7.8125rem;
+
+            &::before {
+                content: "";
+                width: 84px;
+                height: 100%;
+                background-color: #23085A;
+                transform: skew(0deg, -45deg);
+                position: absolute;
+                right: 100%;
+                top: 42px;
+                width: 134px;
+                top: 68px;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 80px;
+                background-color: #FF8200;
+                transform: skew(-45deg, 0deg);
+                position: absolute;
+                left: -40px;
+                top: 100%;
+                height: 127px;
+                left: -63px
+            }
+
+
+            p {
+
+                padding: var(--s-xs) var(--s-xxl) var(--s-mmd) 0;
+                color: var(--c-title-btn);
+            }
+
+            a {
+                align-self: center;
+                margin-top: auto;
+                width: 30%;
+                text-align: center;
+
+            }
+
+        }
+    }
+}
+
 /* END OF BANNER MIDDLE*/
