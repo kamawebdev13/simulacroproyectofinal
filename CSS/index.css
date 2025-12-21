@@ -914,13 +914,13 @@ header,
                         line-height: 1.5rem;
                         padding: var(--s-sm) var(--s-md);
                     }
-
+/* 
                     &:hover {
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                         transform: translateY(-10px);
                         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-                    }
+                    } */
 
                 }
 
