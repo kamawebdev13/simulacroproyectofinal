@@ -15,15 +15,27 @@
     <header>
         <nav class="header___nav container">
             <div class="header__nav__nav-register">
-                <div class="searchIcon">
-                    <i class="ri-search-line"></i>
+                <div class="colapsible__block">
+                    <div class="search-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+                    <div class="colapsible-searchbar">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="colapsible-bubble">
+                        <div class="bubble-info">
+                            <p class="body">Enter the terms you wish to search for.</p>
+                        </div>
+                    </div>
+                    <i class="ri-arrow-right-s-fill"></i>
                 </div>
                 <a class="btn--squared" href="#">Log in</a>
                 <a class="btn--squared" href="#">Register</a>
             </div>
+
             <div class="header__nav__nav-logos">
-                <a href="#"><img class="logoBC" src="./images/imgi_1_logo.svg" alt="logo"></a>
-                <a class="logoTitle text--md" href="#">LearnEnglish Kids</a>
+                <a href="#"><img loading="lazy" class="logo-BC" src="./images/imgi_1_logo.svg" alt="logo"></a>
+                <a class="logo-Title text--lg" href="#">LearnEnglish Kids</a>
             </div>
             <ul class="header__nav__nav-default ">
                 <li><a class="btn--light" href="#">Home</a></li>
@@ -128,41 +140,132 @@
     <!--END OF HEADER-->
     <main>
         <!--BANNER TOP-->
-        <section class="banner-top container">
-            <div class="banner-top-image">
-                <img src="./images/imgi_2_songs-hello-hello-hello.png" alt="hello-hello-hello">
-            </div>
-            <div class="banner-top-content">
-                <h1>Hello, hello, hello</h1>
-                <p>Who is B23A? Listen to a song called <em>Hello, hello, hello</em> and sing along.</p>
-                <a href="#">Watch the Video</a>
+        <section class="banner">
+            <div class="banner-top container">
+                <div class="banner-top-image container">
+                    <img loading="lazy" src="./images/imgi_2_songs-hello-hello-hello.png" alt="hello-hello-hello">
+                </div>
+                <div class="banner-top-content">
+                    <h1 class="text--xl">Hello, hello, hello</h1>
+                    <p class="text--sm">Who is B23A? Listen to a song called <em>Hello, hello, hello</em> and sing
+                        along.
+                    </p>
+                    <div class="link-video">
+                        <a class="btn--rounded" href="#">Watch the Video</a>
+                    </div>
+                </div>
+
             </div>
         </section>
         <!--END OF BANNER-TOP-->
 
         <!--HERO SECTION-->
         <section class="hero">
-            <div class="hero__block">
-                <h2>Welcome to LearnEnglish Kids</h2>
-                <p>LearnEnglish Kids is brought to you by the British Council,
+            <div class="hero__block container">
+                <h2 class="text--lg">Welcome to LearnEnglish Kids</h2>
+                <p class="text--sm">LearnEnglish Kids is brought to you by the British Council,
                     the world's English teaching experts. We have lots of free online games,
                     songs, stories and activities for children. For parents,
                     we have articles on supporting children in learning English,
-                    videos on using English at home and information about English
-                    courses for your child.</p>
+                    videos on using English at home and information about <a href="#" alt="blank">English
+                        courses for your child.</a></p>
             </div>
         </section>
         <!--END OF HERO SECTION-->
 
         <!--GRID SECTION-->
         <section class="grid">
-            <div class="grid__card">
-                <img class="card__image" src="#" alt="">
-                <div class="card__background"></div>
-                <div class="card__info">
-                    <h3>Listen and watch</h3>
-                    <p>Learn to sing songs in English and watch fun stories and videos!</p>
-                    <button>Learn more</button>
+            <div class="grid-cards__block container">
+                <div class="card">
+                    <div class="card-image">
+                        <img loading="lazy" class="card__image" src="./images/imgi_13_1_0_0.png" alt="monster-ipod">
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card-content">
+                            <h3 class="text--md">Listen and watch</h3>
+                            <p class="text--sm">Learn to sing songs in English and watch fun stories and videos!</p>
+                        </div>
+                        <a class="btn--rounded" href="#">Learn more</a>
+                    </div>
+                </div>
+
+                <!--CARD-TWO-->
+                 <div class="card">
+                    <div class="card-image">
+                        <img loading="lazy" class="card__image" src="./images/imgi_14_2_1_0.png" alt="monster-reading">
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card-content">
+                            <h3 class="text--md">Read and write</h3>
+                            <p class="text--sm">Read and write about interesting topics</p>
+                        </div>
+                        <a class="btn--rounded" href="#">Learn more</a>
+                    </div>
+                </div>
+
+
+                 <!--CARD-THREE-->
+                 <div class="card">
+                    <div class="card-image">
+                        <img loading="lazy" class="card__image" src="./images/imgi_15_3_0_0.png" alt="monster-spelling">
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card-content">
+                            <h3 class="text--md">Speak and spell</h3>
+                            <p class="text--sm">Learn how to say and spell English words with songs and stories.</p>
+                        </div>
+                        <a class="btn--rounded" href="#">Learn more</a>
+                    </div>
+                </div>
+
+
+                   <!--CARD-FOUR-->
+                 <div class="card">
+                    <div class="card-image">
+                        <img loading="lazy" class="card__image" src="./images/imgi_16_4_0_0.png" alt="monster-studying">
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card-content">
+                            <h3 class="text--md">Grammar and vocabulary</h3>
+                            <p class="text--sm">Learn about grammar rules, play word games and watch fun videos.</p>
+                        </div>
+                       <a class="btn--rounded" href="#">Learn more</a>
+                    </div>
+                </div>
+
+
+                   <!--CARD-FIVE-->
+                 <div class="card">
+                    <div class="card-image">
+                        <img loading="lazy" class="card__image" src="./images/imgi_17_5_0_0.png" alt="monsters-playing">
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card-content">
+                            <h3 class="text--md">Fun and games</h3>
+                            <p class="text--sm">Play games and practise your speaking with our fun tongue twisters.</p>
+                        </div>
+                        <a class="btn--rounded" href="#">Learn more</a>
+                    </div>
+                </div>
+
+                   <!--CARD-SIX-->
+                 <div class="card">
+                    <div class="card-image">
+                        <img loading="lazy" class="card__image" src="./images/imgi_18_6_0_0.png" alt="monster-crafts">
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card-content">
+                            <h3 class="text--md">Print and make</h3>
+                            <p class="text--sm">Print flashcards, worksheets and colouring pages or make some crafts.</p>
+                        </div>
+                        <a class="btn--rounded" href="#">Learn more</a>
+                    </div>
                 </div>
 
 
@@ -175,15 +278,15 @@
 
         <!--BANNER MIDDLE-->
         <section class="banner-middle">
-            <div class="banner-middle__background">
+            <div class="banner-middle-background container">
                 <div class="banner-middle__block">
-                    <p>Do you or your child need more help with your English?</p>
-                    <a href="#">Learn more</a>
+                    <p class="text--xl">Do you or your child need more help with your English?</p>
+                    <a class="btn--rounded" href="#">Learn more</a>
                 </div>
-                <img src="#" alt="">
             </div>
         </section>
         <!--END OF BANNER-MIDDLE-->
+
         <!--BLOG SECTION-->
         <section class="blog">
             <div class="blog__block">
@@ -213,13 +316,10 @@
 
         <!--BANNER BOTTOM-->
         <section class="banner-bottom">
-            <div class="banner-bottom__background">
+            <div class="banner-bottom-background">
                 <div class="banner-bottom__block">
                     <p>English courses for children aged 6–17</p>
                     <a href="#">Learn more</a>
-                </div>
-                <img src="#" alt="">
-            </div>
         </section>
         <!--END OF BANNER-BOTTOM-->
     </main>
