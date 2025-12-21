@@ -188,7 +188,7 @@ body {
     margin: 0;
     background: linear-gradient(180deg,
             #FFE300 0%,
-            #FF8200 20%,
+            #FF8200 5%,
             #FF4635 84%);
 }
 
@@ -627,7 +627,7 @@ header,
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
-        grid-auto-rows: auto;
+        grid-auto-rows: 1fr;
         gap: 6rem .625rem;
         margin: var(--s-xl) auto;
         padding: var(--s-lg) 0 0 0;
@@ -637,8 +637,8 @@ header,
         .card {
 
             max-width: 23rem;
-            height: 50%;
             width: 100%;
+            height: auto;
 
             display: flex;
             flex-direction: column;
@@ -651,7 +651,7 @@ header,
 
             .card-image {
                 position: relative;
-                min-height: 140px;
+                min-height: 8.75rem;
 
 
                 img {
@@ -682,6 +682,8 @@ header,
                     flex-direction: column;
                     align-items: flex-start;
                     gap: var(--s-xs);
+                    flex: 1 0 auto;
+                  
 
                     h3 {
                         color: var(--c-title-btn);
@@ -1028,3 +1030,112 @@ header,
 }
 
 /* END OF BANNER MIDDLE*/
+
+/*FOOTER*/
+
+.footer {
+    width: 100%;
+    padding: var(--s-lg) var(--s-xl);
+    background-color: #c51350;
+
+
+
+
+    .footer__block {
+
+
+        .block {
+            display: flex;
+            flex-direction: row;
+
+            .footer__block__wrapper-one,
+            .footer__block__wrapper-two,
+            .footer__block__wrapper-three,
+            .footer__block__wrapper-four {
+
+                display: flex;
+                flex-direction: column;
+                gap: var(--s-lg);
+                flex: 1 0 0;
+
+                .footer__block__menu {
+
+                    li {
+                        margin-bottom: var(--s-mmd);
+
+                        .text--sm {
+
+                            color: var(--c-active);
+                            font-size: 1.25rem;
+
+                            a {
+                                color: var(--c-active);
+                                margin: var(--s-xs) 0;
+
+
+                                &:hover {
+                                    text-decoration: underline;
+
+                                }
+                            }
+
+
+                        }
+
+
+
+                        .body {
+                            color: white;
+                            font-size: 1rem;
+
+                            &:hover {
+
+                                text-decoration: underline;
+                            }
+
+                        }
+
+
+                    }
+                }
+
+                .social-media {
+                    display: flex;
+                    gap: var(--s-md);
+
+                    .ri-facebook-circle-fill, .ri-instagram-line, .ri-youtube-fill {
+
+                        font-size: 1.5rem;
+                        color: white;
+
+                    }
+                }
+
+                .trademark-info {
+                    color: white;
+
+                    .text--sm {
+                        font-size: .8em;
+                        font-weight: bolder;
+
+                    }
+
+                    .text--xs {
+                        font-size: .7em;
+                    }
+
+                }
+
+
+            }
+
+
+
+        }
+
+
+
+    }
+}
+
+/*END OF FOOTER*/
