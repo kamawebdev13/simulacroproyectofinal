@@ -864,15 +864,14 @@ header,
 
             }
 
-
-            .cards {
+            /*CARDS CONTAINER PARA CARROUSEL JS*/
+            #card-container {
                 display: flex;
-                gap: var(--s-lg);
-
                 width: 100%;
-                max-width: 65.5rem;
-                justify-content: flex-start;
-
+                overflow: hidden;
+                transition: transform 0.1s linear;
+                gap: 2rem;
+            }
 
 
                 .blog__card {
@@ -890,41 +889,39 @@ header,
                     img {
                         border-radius: var(--r-md);
                         padding: var(--s-sm);
-                        width: 60%;
-                        height: 100%;
+                        width: 80%;
+                        height: 80%;
                         object-fit: cover;
                     }
 
                     .description {
 
-                        a {
+                        .text--md {
+                            text-align: center;
+
+
+                        }
+
+                        p {
+                            text-align: left;
+                            line-height: 1.5rem;
                             padding: var(--s-sm) var(--s-md);
-                            color: var(--c-title-btn);
-
-                            &:hover {
-                                text-decoration: underline;
-
-                            }
-
                         }
                     }
 
-                    p {
-                        text-align: left;
-                        line-height: 1.5rem;
-                        padding: var(--s-sm) var(--s-md);
-                    }
-/* 
-                    &:hover {
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        transform: translateY(-10px);
-                        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-                    } */
-
                 }
 
-            }
+                /*  CARD AUMENTA TAMAÑO AL HACER CLICK PARA EVENTO JS*/
+
+                .blog__card.active {
+                    transform: scale(1.1);
+                    transition: transform 0.3s ease;
+                    border: 2px solid orange;
+                    z-index: 10;
+                    box-shadow:#23085A 0px 4px 15px;
+                }
+
+            
 
         }
 
